@@ -4,7 +4,7 @@ export default function LadderList({ladder}) {
       <div className="w-full flex flex-col items-center">
         <div className="flex flex-col items-center w-full lg:mb-8">
           {ladder.data.map((item) => (
-            <div className='flex'>
+            <div className='flex' key={item.key}>
               <div>
                 <p>{item.attributes.rank}</p>
               </div>

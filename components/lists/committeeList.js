@@ -10,7 +10,7 @@ export default function CommitteeList({committee, children}) {
         </article>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full lg:mb-8">
           {committee.data.map((item) => (
-            <div className="flex flex-col shadow border-b-2 border-radred bg-neutral-50">
+            <div className="flex flex-col shadow border-b-2 border-radred bg-neutral-50" key={item.id}>
               <div className='p-5'>
                 <div className="overflow-hidden rounded-full">
                   <Image image={item.attributes.image}/>

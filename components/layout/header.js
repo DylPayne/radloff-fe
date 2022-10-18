@@ -25,7 +25,7 @@ export default function Header() {
             <p className="font-light hover:underline hover:cursor-pointer text-2xl">HOME</p>
           </Link>
           {pages.map((page) => (
-            <Link href={page.link}>
+            <Link href={page.link} key={page.link}>
               <p className="font-light hover:underline hover:cursor-pointer text-2xl">{page.name}</p>
             </Link>
           ))}
