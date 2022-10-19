@@ -19,7 +19,7 @@ export async function fetchAPI(path) {
 }
 
 export async function getLadder() {
-  const ladder = await fetchAPI('/ladders')
+  const ladder = await fetchAPI('/ladders?sort=rank')
   return ladder;
 }
 
@@ -29,7 +29,7 @@ export async function getCommittee() {
 }
 
 export async function getCommitteeDeep() {
-  const committee = await fetchAPI('/committees?populate=*')
+  const committee = await fetchAPI('/committees?populate=*&sort=rank')
   return committee;
 }
 

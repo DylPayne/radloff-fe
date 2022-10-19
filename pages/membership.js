@@ -12,7 +12,7 @@ export default function Membership({memberships}) {
       <Layout>
         <div className='flex w-full justify-center'>
           <article className="prose mb-4 text-center">
-            <h1>Committee</h1>
+            <h1>Membership</h1>
           </article>
         </div>
         <MembershipList memberships={memberships}/>

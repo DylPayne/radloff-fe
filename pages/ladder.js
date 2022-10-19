@@ -8,7 +8,7 @@ export default function Ladder({ladder}) {
   return (
     <>
       <Layout>
-        <div className='flex justify-center'>
+        <div className='flex justify-center mb-6'>
           <article className="prose">
             <h1>Ladder</h1>
           </article>

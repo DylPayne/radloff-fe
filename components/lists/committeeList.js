@@ -10,9 +10,9 @@ export default function CommitteeList({committee, children}) {
         </article>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full lg:mb-8">
           {committee.data.map((item) => (
-            <div className="flex flex-col shadow border-b-2 border-radred bg-neutral-50" key={item.id}>
+            <div className="flex flex-col shadow border-b-2 border-radred bg-neutral-100" key={item.id}>
               <div className='p-5'>
-                <div className="overflow-hidden rounded-full">
+                <div className="overflow-hidden rounded-full grayscale">
                   <Image image={item.attributes.image}/>
                 </div>
               </div>
@@ -21,7 +21,7 @@ export default function CommitteeList({committee, children}) {
                   <h3>{item.attributes.name}</h3>
                 </article>
               </div>
-              <div className="">
+              <div className="mb-3">
                 <article className="prose">
                   <p>{item.attributes.title}</p>
                 </article>
