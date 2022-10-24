@@ -156,9 +156,9 @@ export default function Index({ allPosts, preview }) {
             </svg>
             <blockquote>
               <p className='text-2xl font-medium text-gray-900 dark:text-white'>
-                "A social hub incorporated into a small squash club enjoyed by
-                many. Well kept, clean, personable, and good coaching available.
-                Definitely worth joining."
+                &quot;A social hub incorporated into a small squash club enjoyed
+                by many. Well kept, clean, personable, and good coaching
+                available. Definitely worth joining.&quot;
               </p>
             </blockquote>
             <figcaption className='flex items-center justify-center mt-6 space-x-3'>
