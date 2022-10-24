@@ -8,9 +8,7 @@ import { Alert } from 'flowbite-react';
 export default function Index({ allPosts, preview }) {
   return (
     <>
-      <Head>
-        <title>Radloff Squash Club</title>
-      </Head>
+      
       <Layout>
         {/* SECTION 1 */}
         <div className=' mx-auto flex flex-col items-center py-12 sm:py-24'>
