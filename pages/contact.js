@@ -45,8 +45,9 @@ export default function About() {
               <div>
                 {/*Address*/}
                 <h5 className="mt-6 mb-3 font-semibold tracking-wide">Address</h5>
-                <p className="tracking-wide">39 Bergendal Road</p>
-                <p className="tracking-wide">Constantia Hills</p>
+                <p className="tracking-wide">Radloff Park Squash Club</p>
+                <p className="tracking-wide">153 Lourensford Rd</p>
+                <p className="tracking-wide">Somerset West</p>
                 <p className="tracking-wide">Cape Town</p>
               </div>
 
