@@ -1,6 +1,6 @@
 export default function LadderList({ ladder, category }) {
   return (
-    <div className='flex flex-col-reverse lg:flex-col items-center mb-4'>
+    <div className='flex flex-col lg:flex-col items-center mb-4'>
       <article className='prose mb-2'>
         <h2>{category}</h2>
       </article>
