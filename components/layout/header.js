@@ -67,7 +67,7 @@ export default function Header() {
       <div className="hidden md:flex justify-center gap-x-8 bg-radred py-1">
         {pages.map((page) => (
           <Link href={page.link} key={page.link}>
-            <p className="text-white font-thin hover:underline hover:cursor-pointer">{page.name}</p>
+            <p className="text-white font-light hover:underline hover:cursor-pointer">{page.name}</p>
           </Link>
         ))}
       </div>

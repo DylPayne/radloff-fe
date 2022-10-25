@@ -8,6 +8,9 @@ import {
 } from '@iconscout/react-unicons';
 import Link from 'next/link';
 
+import { sendEmail } from '../util/api';
+import axios from 'axios';
+
 const center = {
   lat: -34.0791903,
   lng: 18.8732513,
@@ -43,41 +46,35 @@ export default function About() {
   const [number, setNumber] = useState('');
   const [message, setMessage] = useState('');
   const handleSubmit = async () => {
-    const body = {
-      token: 'your-recaptcha-token',
-      formName: 'Test Form',
-      FormData: {
-        name: name,
-        email: email,
-        number: number,
-        message: message,
-      },
+    let form = {
+      name: name,
+      email: email,
+      number: number,
+      message: message,
     };
-    console.log(body);
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    };
-    fetch(
-      'https://warm-dawn-10856.herokuapp.com/api/ezforms/submit/',
-      requestOptions
-    )
+    let token = 'repatcha_token';
+
+    axios
+      .post('https://warm-dawn-10856.herokuapp.com/api/ezforms/submit', {
+        token,
+        formData: form,
+      })
       .then((res) => {
         console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
         setName('');
         setEmail('');
         setNumber('');
         setMessage('');
         alert('Message sent');
-      })
-      // .then((json) => {
-      //   console.log(json);
-      // })
-      .catch((err) => {
-        console.log(err);
-        alert('Error sending message');
       });
+    // sendEmail(name, email, number, message).then((res) => {
+    //   console.log(res);
+    // });
   };
 
   return (
@@ -106,13 +103,10 @@ export default function About() {
                   Connect with us
                 </h5>
                 <div className='flex gap-4 items-center'>
-                  <Link href='https://www.facebook.com'>
+                  <Link href='https://www.facebook.com/radloffparksquash/'>
                     <UilFacebookF size={21} />
                   </Link>
-                  <Link href='https://www.instagram.com'>
-                    <UilInstagram size={22} />
-                  </Link>
-                  <Link href='https://www.whatsapp.com'>
+                  <Link href='https://wa.me/270797744814?text=Hi%20there%2C%20I%20would%20like%20to%20contact%20you%20regarding%20the%20Radloff%20Squash%20Club.'>
                     <UilWhatsapp size={22} />
                   </Link>
                 </div>

@@ -8,7 +8,6 @@ import { Alert } from 'flowbite-react';
 export default function Index({ allPosts, preview }) {
   return (
     <>
-      
       <Layout>
         {/* SECTION 1 */}
         <div className=' mx-auto flex flex-col items-center py-12 sm:py-24'>
@@ -58,7 +57,7 @@ export default function Index({ allPosts, preview }) {
                     </p>
                     <div className='flex items-center cursor-pointer pb-4 md:pb-0'>
                       <h3 className='f-f-r text-lg lg:text-2xl font-semibold underline text-radred'>
-                        Lets Get Started
+                        <Link href='/membership'>Lets Get Started</Link>
                       </h3>
                       <div className='pl-2'>
                         <svg
@@ -106,7 +105,7 @@ export default function Index({ allPosts, preview }) {
                     </h2>
                     <div className='flex items-center cursor-pointer pb-4 md:pb-0'>
                       <h3 className='f-f-r text-lg lg:text-2xl font-semibold underline text-radred'>
-                        Lets Get Started
+                        <Link href='/membership'>Lets Get Started</Link>
                       </h3>
                       <div className='pl-2'>
                         <svg
@@ -182,20 +181,18 @@ export default function Index({ allPosts, preview }) {
           </h2>
           <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
             <div className='inline-flex rounded-md shadow'>
-              <a
-                href='#'
-                className='text-lg inline-flex items-center justify-center rounded-md border border-transparent bg-radred px-5 py-3 text-base font-medium text-white'
-              >
-                Memberships
-              </a>
+              <Link href='/membership'>
+                <a className='text-lg inline-flex items-center justify-center rounded-md border border-transparent bg-radred px-5 py-3 text-base font-medium text-white'>
+                  Memberships
+                </a>
+              </Link>
             </div>
             <div className='ml-3 inline-flex rounded-md shadow'>
-              <a
-                href='#'
-                className=' text-lg inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-radred'
-              >
-                Contact us
-              </a>
+              <Link href='/contact'>
+                <a className=' text-lg inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-radred'>
+                  Contact us
+                </a>
+              </Link>
             </div>
           </div>
         </div>
